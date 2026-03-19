@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
 margin:0;
 padding:0;
@@ -332,4 +333,340 @@ color:white;
 background:#222;
 color:white;
 
+=======
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f8f8f8;
+color:#333;
+}
+
+/* GLOBAL IMAGE RESPONSIVE */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+grid-template-columns:1fr auto 1fr;
+justify-content: space-between;
+align-items:center;
+padding:15px 60px;
+background:#000;
+color:white;
+position: sticky;
+top:0;
+z-index: 1000;
+}
+
+.logo{
+justify-self:start;
+font-size:22px;
+font-weight:bold;
+}
+
+.logo span{
+color: #00a862;
+}
+
+.navLinks{
+display:flex;
+gap:30px;
+justify-content:center;
+}
+
+.navLinks a{
+margin: 0 15px;
+text-decoration:none;
+color:white;
+font-size:15px;
+transition:0.3s;
+}
+
+.navLinks a:hover{
+color:#00a862;
+}
+
+/* hover underline animation */
+
+.navLinks a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#c59d5f;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.navLinks a:hover::after{
+width:100%;
+}
+
+.navRight{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* LOGIN BUTTON */
+
+.loginBtn{
+justify-self:end;
+padding:6px 15px;
+border:1px solid #fff;
+border-radius:5px;
+color:white;
+text-decoration:none;
+border-radius: 20px;
+}
+
+.loginBtn:hover{
+background: white;
+color: black;
+}
+
+.menuTitle{
+text-align:center;
+margin:40px 0;
+font-size:40px;
+}
+
+.menuControls{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+#search{
+padding:10px 15px;
+width:250px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.filters button{
+padding:10px 18px;
+border:none;
+background:#111;
+color:white;
+cursor:pointer;
+border-radius:5px;
+margin:5px;
+transition:0.3s;
+}
+
+.filters button:hover{
+background:#c59d5f;
+}
+
+.menuGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.menuSection{
+padding:80px 10%;
+background:#f5f5dc;
+text-align:center;
+}
+
+.menuTitle{
+font-size:40px;
+margin-bottom:40px;
+color:#6f4e37;
+}
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
+/* MENU CARD */
+
+.menuCard{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.menuCard:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.productCard{
+background:white;
+border-radius:10px;
+padding:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.productCard:hover{
+transform:translateY(-8px);
+}
+
+.productCard img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.rating{
+color:gold;
+margin:6px 0;
+font-size:18px;
+}
+
+.addBtn{
+background:#00754a;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+transition:0.3s;
+}
+
+.addBtn:hover{
+background:#005f3a;
+transform:scale(1.05);
+}
+
+/* IMAGE */
+
+.menuCard img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition: 0.4s;
+}
+
+.menuCard:hover img{
+    transform: scale(1.1);
+}
+
+.menuCard h3{
+margin:10px 0;
+}
+
+.menuCard p{
+color:#c59d5f;
+font-weight:bold;
+}
+
+.cartIcon{
+position:relative;
+font-size:20px;
+cursor:pointer;
+}
+
+#cartCount{
+position:absolute;
+top:-8px;
+right:-10px;
+background:red;
+color:white;
+font-size:12px;
+padding:3px 7px;
+border-radius:50%;
+}
+
+/* TEXT */
+
+.menuContent{
+padding:20px;
+}
+
+.menuContent h3{
+color:#6f4e37;
+margin-bottom:10px;
+}
+
+.menuGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding: 40px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.social{
+margin-bottom:15px;
+}
+
+.social i{
+font-size:20px;
+margin:0 10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.social i:hover{
+color:#c59d5f;
+}
+
+.price{
+color:#c59d5f;
+font-weight:bold;
+font-size:18px;
+}
+
+.menuCard img{
+transition:0.4s;
+}
+
+.menuCard:hover img{
+transform:scale(1.1);
+}
+
+.dark{
+
+background:#111;
+color:white;
+
+}
+
+.dark .card{
+
+background:#222;
+color:white;
+
+>>>>>>> f371553c727b229df2dc773fafd70c1102aed835
 }

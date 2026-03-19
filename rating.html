@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,4 +61,68 @@ stars.forEach(star => {
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Star Rating</title>
+
+<style>
+  body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:50px;
+  }
+
+  .stars{
+    font-size:40px;
+    cursor:pointer;
+    color:gray;
+  }
+
+  .active{
+    color:gold;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Give Your Rating ⭐</h2>
+
+<div id="rating">
+  <span class="stars" data-value="1">★</span>
+  <span class="stars" data-value="2">★</span>
+  <span class="stars" data-value="3">★</span>
+  <span class="stars" data-value="4">★</span>
+  <span class="stars" data-value="5">★</span>
+</div>
+
+<p id="result">Rating: 0</p>
+
+<script>
+const stars = document.querySelectorAll(".stars");
+const result = document.getElementById("result");
+
+stars.forEach(star => {
+  star.addEventListener("click", () => {
+
+    let value = star.getAttribute("data-value");
+
+    // reset stars
+    stars.forEach(s => s.classList.remove("active"));
+
+    // fill stars
+    for(let i=0; i<value; i++){
+      stars[i].classList.add("active");
+    }
+
+    result.innerText = "Rating: " + value;
+  });
+});
+</script>
+
+</body>
+>>>>>>> f371553c727b229df2dc773fafd70c1102aed835
 </html>
