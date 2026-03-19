@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background: #0f0f0f;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* SLIDER */
+.banner .slider{
+  position: absolute;
+  width: 200px;        /* slim */
+  height: 260px;       /* certificate ratio */
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%) perspective(1000px);
+  transform-style: preserve-3d;
+
+  animation: autoRun 28s linear infinite;
+}
+
+/* AUTO ROTATION */
+@keyframes autoRun{
+  from{
+    transform: translateX(-50%) perspective(1000px) rotateY(0deg);
+  }
+  to{
+    transform: translateX(-50%) perspective(1000px) rotateY(360deg);
+  }
+}
+
+/* EACH CARD */
+.banner .slider .item{
+  position: absolute;
+  inset: 0;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(380px);   /* 🚀 bahar jaana band */
+}
+
+/*IMAGE */
+.banner .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* 🔥 certificate pura dikhe */
+  background: #fff;         /* certificate paper feel */
+  padding: 10px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+/* slight hover zoom */
+.banner .slider .item img:hover{
+  transform: scale(1.05);
+}
+
+/* PAUSE ON HOVER */
+.banner .slider:hover{
+  animation-play-state: paused;
+}
+.banner .slider .item img{
+  transition: transform 0.3s ease;
+}
+
+
+

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+<div class="start-screen">
+    <button id="start-button">Start</button>
+</div>
+
+<!-- QUIZ CONTAINER -->
+<div id="display-container" class="hide">
+    <div class="header">
+        <div class="number-of-count">
+            <span class="number-of-question">1 of 15 questions</span>
+        </div>
+        <div class="timer-div">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png" width="20px">
+            <span class="time-left">10s</span>
+        </div>
+    </div>
+
+    <div id="container">
+        <!-- JS yaha questions daalega -->
+    </div>
+
+    <button id="next-button">Next</button>
+</div>
+
+<!-- SCORE SCREEN -->
+<div class="score-container hide">
+    <div id="user-score">Score</div>
+    <button id="restart">Restart</button>
+</div>
+
+<!-- JS -->
+<script src="quiz.js"></script>
+</body>
+</html>
